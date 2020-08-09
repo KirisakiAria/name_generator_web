@@ -1,11 +1,9 @@
-import { mapState } from 'vuex'
+import API from '../request/API'
+
 export default {
-  beforeRouteEnter(to, from, next) {
-    next(() => {
-      window.scrollTo(0, 0)
-    })
+  data() {
+    return {
+      API: API,
+    }
   },
-  computed: mapState({
-    swiperOptions: state => state.swiperOptions,
-  }),
 }

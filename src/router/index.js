@@ -5,9 +5,9 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: () => import('@/views/PrivacyPolicy;'),
+    path: '/privacypolicy',
+    name: 'PrivacyPolicy',
+    component: () => import('@/views/PrivacyPolicy'),
   },
 ]
 

@@ -1,28 +1,7 @@
 <template>
-  <div id="app">
-    <HeaderBar :transparent="transparent" />
+  <main id="app">
     <transition name="fade" mode="out-in">
       <router-view />
     </transition>
-    <FooterBar />
-  </div>
+  </main>
 </template>
-
-<script>
-  export default {
-    data() {
-      return {
-        transparent: true,
-      }
-    },
-    watch: {
-      $route(val) {
-        if (val.path.includes('home')) {
-          this.transparent = true
-        } else {
-          this.transparent = false
-        }
-      },
-    },
-  }
-</script>
