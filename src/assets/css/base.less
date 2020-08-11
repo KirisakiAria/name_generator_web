@@ -82,10 +82,6 @@ h2 {
 
 h3 {
   font-size: 0.38rem;
-  margin-top: 0.5rem;
-  line-height: 1.4;
-  letter-spacing: 0.6px;
-  text-align: center;
 }
 
 h4 {
@@ -128,4 +124,32 @@ textarea {
 
 .container {
   padding: 0.5rem 0.3rem;
+
+  h2 {
+    margin: 0.4rem 0;
+  }
+
+  h3 {
+    margin-top: 0.5rem;
+    line-height: 1.4;
+  }
+
+  li {
+    position: relative;
+    line-height: 1.4;
+    margin: 0.3rem 0;
+    padding-left: 0.4rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.2rem;
+      transform: translateY(-50%);
+      width: 0.16rem;
+      height: 0.16rem;
+      border-radius: 50%;
+      background: #333;
+    }
+  }
 }

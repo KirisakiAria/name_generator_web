@@ -1,6 +1,6 @@
 <template>
   <section class="privacy-policy container">
-    <h1>隐私协议</h1>
+    <h1>使用方法</h1>
     <section v-html="content"></section>
   </section>
 </template>
@@ -8,14 +8,14 @@
   import mixin from '../mixin/mixin'
 
   export default {
-    name: 'PrivacyPolicy',
+    name: 'Usage',
     mixins: [mixin],
     data() {
       return { content: '' }
     },
     methods: {
       async getData() {
-        const res = await this.$get(this.API.privacyPolicy)
+        const res = await this.$get(this.API.usage)
         if (res.data.code == '1000') {
           this.content = res.data.data
         }

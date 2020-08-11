@@ -9,6 +9,16 @@ const routes = [
     name: 'PrivacyPolicy',
     component: () => import('@/views/PrivacyPolicy'),
   },
+  {
+    path: '/terms',
+    name: 'Terms',
+    component: () => import('@/views/Terms'),
+  },
+  {
+    path: '/usage',
+    name: 'Usage',
+    component: () => import('@/views/Usage'),
+  },
 ]
 
 const router = new VueRouter({
