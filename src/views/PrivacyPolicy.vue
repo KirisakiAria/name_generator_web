@@ -1,5 +1,5 @@
 <template>
-  <section class="privacy-policy container">
+  <section class="container">
     <h1>隐私协议</h1>
     <section v-html="content"></section>
   </section>
@@ -26,7 +26,3 @@
     },
   }
 </script>
-
-<style lang="less" scoped>
-  @import url('../assets/css/style.less');
-</style>
