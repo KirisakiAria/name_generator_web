@@ -1,5 +1,5 @@
 const version = 'v1'
-const api_prefix = `/api/${version}/service/`
+const api_prefix = `/api/${version}/service`
 
 export default {
   privacyPolicy: `${api_prefix}/privacypolicy`,
