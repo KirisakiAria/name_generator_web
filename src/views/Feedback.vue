@@ -36,6 +36,9 @@
             })
             .goAway(2500)
         }
+        if (this.form.tel == 'null') {
+          this.form.tel = 0
+        }
         const res = await this.$post(this.API.feedback, this.form)
         if (res.data.code == '1000') {
           this.$toasted

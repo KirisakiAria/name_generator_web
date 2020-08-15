@@ -9,6 +9,7 @@ import Toasted from 'vue-toasted'
 import './request/requestConfig'
 //引入样式
 import './assets/css/base.less'
+import './assets/fonts/iconfont.css'
 
 Vue.config.productionTip = false
 Vue.use(Toasted)
