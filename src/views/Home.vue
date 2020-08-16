@@ -31,7 +31,7 @@
     </header>
     <section class="main">
       <div id="infinite-lights"></div>
-      <h1>彼岸自在</h1>
+      <h1><img src="../assets/img/bianzizai.png" alt="" /></h1>
       <p>最懂你的ID生成器</p>
       <div class="download">
         <a href="/download/bianzizai_latest.7z">
@@ -1391,19 +1391,31 @@ void main() {
       h1 {
         margin-top: 0.5rem;
         font-weight: bold;
-        font-size: 0.6rem;
         color: #fff;
         z-index: 10;
+
+        img {
+          width: 400px;
+        }
+
+        @media screen and (max-width: 750px) {
+          img {
+            width: 220px;
+          }
+        }
       }
+
       p {
-        margin-top: 0.2rem;
-        font-size: 0.36rem;
+        margin-top: 0.25rem;
+        font-size: 0.34rem;
         text-align: center;
         color: #fff;
         z-index: 10;
+        letter-spacing: 14px;
       }
+
       .download {
-        margin-top: 0.2rem;
+        margin-top: 0.25rem;
         z-index: 10;
         img {
           width: 2.6rem;
