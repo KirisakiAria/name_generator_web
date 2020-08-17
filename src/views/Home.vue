@@ -31,13 +31,25 @@
     </header>
     <section class="main">
       <div id="infinite-lights"></div>
-      <h1><img src="../assets/img/bianzizai.png" alt="" /></h1>
-      <p>最懂你的ID生成器</p>
-      <div class="download">
-        <a href="/download/bianzizai_latest.7z">
-          <img src="../assets/img/android.png" alt="" />
-        </a>
-      </div>
+      <section class="screen">
+        <h1><img src="../assets/img/bianzizai.png" alt="" /></h1>
+        <p>最懂你的ID生成器</p>
+        <div class="download">
+          <a href="/download/bianzizai_latest.7z">
+            <img src="../assets/img/android.png" alt="" />
+          </a>
+        </div>
+      </section>
+      <section class="screen">
+        <swiper ref="mySwiper" :options="swiperOptions">
+          <swiper-slide>Slide 1</swiper-slide>
+          <swiper-slide>Slide 2</swiper-slide>
+          <swiper-slide>Slide 3</swiper-slide>
+          <swiper-slide>Slide 4</swiper-slide>
+          <swiper-slide>Slide 5</swiper-slide>
+          <div class="swiper-pagination" slot="pagination"></div>
+        </swiper>
+      </section>
     </section>
   </section>
 </template>
@@ -45,6 +57,8 @@
   import * as THREE from 'three'
   const POSTPROCESSING = require('postprocessing')
   import mixin from '../mixin/mixin'
+  import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
+  import 'swiper/swiper-bundle.css'
 
   export default {
     name: 'Home',
@@ -67,7 +81,16 @@
             path: 'usage',
           },
         ],
+        swiperOptions: {
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        },
       }
+    },
+    components: {
+      Swiper,
+      SwiperSlide,
     },
     methods: {
       toggleMenu() {
@@ -1380,11 +1403,6 @@ void main() {
     }
 
     .main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       position: relative;
       text-align: center;
 
@@ -1420,6 +1438,14 @@ void main() {
         img {
           width: 2.6rem;
         }
+      }
+
+      .screen {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
     }
   }

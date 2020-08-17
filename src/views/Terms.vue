@@ -1,6 +1,5 @@
 <template>
   <section class="container">
-    <h1>服务条款</h1>
     <section v-html="content"></section>
   </section>
 </template>
