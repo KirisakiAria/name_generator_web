@@ -2,7 +2,7 @@
   <section class="home">
     <header class="header">
       <div class="logo">
-        <img src="../assets/img/logo.png" alt="" />
+        <img src="../assets/img/logo.png" alt="彼岸自在 最懂你的ID生成器" />
         <span>彼岸自在</span>
       </div>
       <nav class="nav" v-if="window.innerWidth <= 750">
@@ -32,23 +32,34 @@
     <section class="main">
       <div id="infinite-lights"></div>
       <section class="screen">
-        <h1><img src="../assets/img/bianzizai.png" alt="" /></h1>
+        <h1>
+          <img
+            src="../assets/img/bianzizai.png"
+            alt="彼岸自在 最懂你的ID生成器"
+          />
+        </h1>
         <p>最懂你的ID生成器</p>
         <div class="download">
           <a href="/download/bianzizai_latest.7z">
-            <img src="../assets/img/android.png" alt="" />
+            <img
+              src="../assets/img/android.png"
+              alt="彼岸自在 安卓android下载"
+            />
           </a>
         </div>
       </section>
       <section class="screen">
-        <swiper ref="mySwiper" :options="swiperOptions">
-          <swiper-slide>Slide 1</swiper-slide>
-          <swiper-slide>Slide 2</swiper-slide>
-          <swiper-slide>Slide 3</swiper-slide>
-          <swiper-slide>Slide 4</swiper-slide>
-          <swiper-slide>Slide 5</swiper-slide>
-          <div class="swiper-pagination" slot="pagination"></div>
-        </swiper>
+        <h5>
+          彼岸自在是一个功能强大的ID生成器（安卓端），它可以根据您选择类型（中国风和日式）来生成您指定字数的ID。我们的ID库极其庞大，您一定可以从中找到属于您的独一无二的专属ID！登陆之后还将享有更多功能！
+        </h5>
+        <div class="swiper">
+          <swiper ref="mySwiper" :options="swiperOptions">
+            <swiper-slide v-for="(item, key) in displayImg" :key="key">
+              <img :src="item.img" alt="彼岸自在 最懂你的ID生成器" />
+            </swiper-slide>
+            <div class="swiper-pagination" slot="pagination"></div>
+          </swiper>
+        </div>
       </section>
     </section>
   </section>
@@ -57,8 +68,8 @@
   import * as THREE from 'three'
   const POSTPROCESSING = require('postprocessing')
   import mixin from '../mixin/mixin'
-  import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
-  import 'swiper/swiper-bundle.css'
+  import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+  import 'swiper/css/swiper.css'
 
   export default {
     name: 'Home',
@@ -84,8 +95,29 @@
         swiperOptions: {
           pagination: {
             el: '.swiper-pagination',
+            clickable: true,
           },
+          autoplay: {
+            delay: 4000,
+          },
+          effect: 'coverflow',
+          slidesPerView: 3,
+          centeredSlides: true,
+          coverflowEffect: {
+            rotate: 30,
+            stretch: 10,
+            depth: 60,
+            modifier: 2,
+            slideShadows: true,
+          },
+          loop: true,
         },
+        displayImg: [
+          { img: require('../assets/img/bianzizai-1.png') },
+          { img: require('../assets/img/bianzizai-2.png') },
+          { img: require('../assets/img/bianzizai-3.png') },
+          { img: require('../assets/img/bianzizai-4.png') },
+        ],
       }
     },
     components: {
@@ -1342,10 +1374,11 @@ void main() {
   }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
   @import url('../assets/css/style.less');
   .home {
     padding: 0;
+    color: #fff;
 
     .header {
       display: flex;
@@ -1446,6 +1479,40 @@ void main() {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+      }
+
+      h5 {
+        z-index: 1;
+        margin-bottom: 50px;
+        color: #fff;
+        width: 1500px;
+        line-height: 1.6;
+      }
+
+      .swiper {
+        width: 1400px;
+
+        .swiper-container {
+          height: 900px;
+          padding-top: 30px;
+          .swiper-pagination {
+            .swiper-pagination-bullet {
+              width: 15px;
+              height: 15px;
+              margin: 0 8px;
+              background: transparent;
+              border: 1px solid #fff;
+              opacity: 1;
+              &.swiper-pagination-bullet-active {
+                background: #fff;
+              }
+            }
+          }
+        }
+
+        img {
+          width: 400px;
+        }
       }
     }
   }
