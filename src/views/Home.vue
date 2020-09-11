@@ -30,7 +30,7 @@
       </nav>
     </header>
     <section class="main">
-      <div id="infinite-lights"></div>
+      <div class="infinite-lights" id="infinite-lights"></div>
       <section class="screen">
         <h1>
           <img
@@ -1389,6 +1389,7 @@ void main() {
       top: 0;
       left: 0;
       padding: 0.3rem;
+      background: rgba(0, 0, 0, 0.8);
       z-index: 10;
       .logo {
         img {
@@ -1429,6 +1430,9 @@ void main() {
               display: block;
               font-size: 24px;
               color: #fff;
+              &:hover {
+                color: #5f27cd;
+              }
             }
           }
         }
@@ -1473,6 +1477,17 @@ void main() {
         }
       }
 
+      .infinite-lights {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        canvas {
+          width: 100vw;
+          height: 100vh;
+        }
+      }
+
       .screen {
         height: 100vh;
         display: flex;
@@ -1483,9 +1498,9 @@ void main() {
 
       h5 {
         z-index: 1;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
         color: #fff;
-        width: 1500px;
+        width: 1400px;
         line-height: 1.6;
       }
 
@@ -1493,7 +1508,7 @@ void main() {
         width: 1400px;
 
         .swiper-container {
-          height: 900px;
+          height: 800px;
           padding-top: 30px;
           .swiper-pagination {
             .swiper-pagination-bullet {
@@ -1511,7 +1526,7 @@ void main() {
         }
 
         img {
-          width: 400px;
+          width: 350px;
         }
       }
     }
