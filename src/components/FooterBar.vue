@@ -2,7 +2,9 @@
   <footer class="footer" :class="{ white }">
     © 2020 All Rights Reserved. 彼岸自在 版权所有
     <br />
-    鲁ICP备2020036898号-1
+    <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
+      鲁ICP备2020036898号-1
+    </a>
   </footer>
 </template>
 
