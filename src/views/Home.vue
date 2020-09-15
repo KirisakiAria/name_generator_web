@@ -62,6 +62,7 @@
         </div>
       </section>
     </section>
+    <footer-bar :white="true" />
   </section>
 </template>
 <script>

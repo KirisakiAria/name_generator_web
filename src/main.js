@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './utils/rem'
+//组件
+import FooterBar from './components/FooterBar.vue'
 //引入插件
 import Toasted from 'vue-toasted'
 //axios配置
@@ -13,6 +15,8 @@ import './assets/fonts/iconfont.css'
 
 Vue.config.productionTip = false
 Vue.use(Toasted)
+
+Vue.component('FooterBar', FooterBar)
 
 new Vue({
   router,
