@@ -2,21 +2,30 @@
   <section class="home">
     <header class="header">
       <div class="logo">
-        <img src="../assets/img/logo.png" alt="彼岸自在 最懂你的ID生成器" />
-        <span>彼岸自在</span>
+        <a href="https://www.bianzizai.com">
+          <img src="../assets/img/logo.png" alt="彼岸自在 最懂你的ID生成器" />
+          <span>彼岸自在</span>
+        </a>
       </div>
       <nav class="nav" v-if="window.innerWidth <= 750">
         <button @click="toggleMenu">
           <i class="iconfont icon-menu"></i>
         </button>
         <transition name="fade">
-          <ul class="menu" v-if="menu">
-            <li v-for="(item, index) in link" :key="index">
-              <router-link :to="item.path">
-                {{ item.name }}
-              </router-link>
-            </li>
-          </ul>
+          <div v-if="menu" class="menu">
+            <div class="menu-header">
+              <button @click="menu = false" class="close-btn">
+                <i class="iconfont icon-close"></i>
+              </button>
+            </div>
+            <ul>
+              <li v-for="(item, index) in link" :key="index">
+                <router-link :to="item.path">
+                  {{ item.name }}
+                </router-link>
+              </li>
+            </ul>
+          </div>
         </transition>
       </nav>
       <nav class="nav" v-else>
@@ -33,17 +42,19 @@
       <div class="infinite-lights" id="infinite-lights"></div>
       <section class="screen">
         <h1>
-          <img
-            src="../assets/img/bianzizai.png"
-            alt="彼岸自在 最懂你的ID生成器"
-          />
+          <a href="https://www.bianzizai.com">
+            <img
+              src="../assets/img/bianzizai.png"
+              alt="彼岸自在 最懂你的ID生成器"
+            />
+          </a>
         </h1>
         <p>最懂你的ID生成器</p>
         <div class="android">
           <img src="../assets/img/android.png" alt="彼岸自在" />
         </div>
       </section>
-      <section class="screen">
+      <section class="second">
         <h5>
           彼岸自在是一个功能强大的ID生成器（安卓端），它可以根据您选择类型（中国风和日式）来生成您指定字数的ID。我们的ID库极其庞大，您一定可以从中找到属于您的独一无二的专属ID！登陆之后还将享有更多功能！
         </h5>
@@ -1415,14 +1426,21 @@
           width: 100%;
           position: absolute;
           left: 0;
-          top: 1.2rem;
-          background: #fff;
-          border-bottom: 1px solid #f1f1f1;
+          top: 0;
+          background: #000;
+          border-bottom: 1px solid #333;
+
+          .menu-header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0.3rem;
+          }
           li {
-            border-top: 1px solid #f1f1f1;
+            border-top: 1px solid #333;
             a {
               display: block;
-              padding: 0.3rem 0.2rem;
+              padding: 0.4rem 0.2rem;
+              color: #fff;
             }
           }
         }
@@ -1500,20 +1518,39 @@
         align-items: center;
       }
 
+      .second {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
       h5 {
         z-index: 1;
         margin-bottom: 50px;
         color: #fff;
-        width: 1400px;
+        max-width: 1400px;
         line-height: 1.6;
+
+        @media screen and (max-width: 750px) {
+          padding: 0 0.4rem;
+          font-size: 0.32rem;
+        }
       }
 
       .swiper {
         width: 1400px;
 
         .swiper-container {
-          height: 800px;
-          padding-top: 30px;
+          height: 850px;
+          padding-top: 35px;
+
+          @media screen and (max-width: 750px) {
+            height: auto;
+            padding-top: 0;
+          }
+
           .swiper-pagination {
             .swiper-pagination-bullet {
               width: 15px;
@@ -1531,6 +1568,18 @@
 
         img {
           width: 350px;
+
+          @media screen and (max-width: 750px) {
+            width: 6rem;
+          }
+        }
+
+        .swiper-pagination-fraction,
+        .swiper-pagination-custom,
+        .swiper-container-horizontal > .swiper-pagination-bullets {
+          @media screen and (max-width: 750px) {
+            bottom: 0.5rem;
+          }
         }
       }
     }

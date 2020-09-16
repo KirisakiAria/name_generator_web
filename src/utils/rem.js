@@ -1,12 +1,12 @@
 !(function (n) {
   const e = n.document,
     t = e.documentElement,
-    i = 720,
+    i = 750,
     d = i / 100,
     o = 'orientationchange' in n ? 'orientationchange' : 'resize',
     a = function () {
       let n = t.clientWidth || 320
-      n > 720 && (n = 720)
+      n > 750 && (n = 750)
       t.style.fontSize = n / d + 'px'
     }
   e.addEventListener &&

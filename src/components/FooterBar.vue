@@ -22,6 +22,7 @@
 <style lang="less" scoped>
   .footer {
     position: relative;
+    margin-top: 60px;
     padding: 25px 0;
     text-align: center;
     color: #666;
@@ -32,6 +33,12 @@
 
     &.white {
       color: #fff;
+    }
+
+    @media screen and (max-width: 750px) {
+      margin-top: 1rem;
+      font-size: 0.3rem;
+      padding: 0.5rem 0.25rem;
     }
   }
 </style>
