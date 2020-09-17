@@ -1,14 +1,14 @@
 <template>
   <section class="feedback container">
     <p>请在下方输入您的意见或建议：</p>
-    <form>
+    <section class="form">
       <textarea v-model="form.content"></textarea>
       <div class="form-item">
         <label for="email">您的联系邮箱：</label>
         <input type="email" id="email" v-model="form.email" />
       </div>
       <button type="button" @click="submitForm">提交</button>
-    </form>
+    </section>
   </section>
 </template>
 <script>
