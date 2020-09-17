@@ -121,10 +121,12 @@
           loop: true,
         },
         displayImg: [
-          { img: require('../assets/img/bianzizai-1.png') },
-          { img: require('../assets/img/bianzizai-2.png') },
-          { img: require('../assets/img/bianzizai-3.png') },
-          { img: require('../assets/img/bianzizai-4.png') },
+          { img: require('../assets/img/1.png') },
+          { img: require('../assets/img/2.png') },
+          { img: require('../assets/img/3.png') },
+          { img: require('../assets/img/4.png') },
+          { img: require('../assets/img/5.png') },
+          { img: require('../assets/img/6.png') },
         ],
       }
     },
