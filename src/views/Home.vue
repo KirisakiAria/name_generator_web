@@ -3,7 +3,7 @@
     <header class="header">
       <div class="logo">
         <a href="https://www.bianzizai.com">
-          <img src="../assets/img/logo.png" alt="彼岸自在 最懂你的ID生成器" />
+          <img src="../assets/img/logo.png" alt="彼岸自在 最懂你的网名生成器" />
           <span>彼岸自在</span>
         </a>
       </div>
@@ -45,23 +45,23 @@
           <a href="https://www.bianzizai.com">
             <img
               src="../assets/img/bianzizai.png"
-              alt="彼岸自在 最懂你的ID生成器"
+              alt="彼岸自在 最懂你的网名生成器"
             />
           </a>
         </h1>
-        <p>最懂你的ID生成器</p>
+        <p>最懂你的网名生成器</p>
         <div class="android">
           <img src="../assets/img/android.png" alt="彼岸自在" />
         </div>
       </section>
       <section class="second">
         <h5>
-          彼岸自在是一个功能强大的ID生成器（安卓端），它可以根据您选择类型（中国风和日式）来生成您指定字数的ID。我们的ID库极其庞大，您一定可以从中找到属于您的独一无二的专属ID！登陆之后还将享有更多功能！
+          彼岸自在是一个功能强大的网名生成器APP（安卓端），它可以根据您选择类型（中国风和日式）来生成您指定字数的网名。我们的词库极其庞大，您一定可以从中找到属于您的独一无二的专属网名！登陆之后还将享有更多功能！
         </h5>
         <div class="swiper">
           <swiper ref="mySwiper" :options="swiperOptions">
             <swiper-slide v-for="(item, key) in displayImg" :key="key">
-              <img :src="item.img" alt="彼岸自在 最懂你的ID生成器" />
+              <img :src="item.img" alt="彼岸自在 最懂你的网名生成器" />
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
           </swiper>
