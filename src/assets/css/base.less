@@ -20,7 +20,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   color: #666;
-  font-size: 0.28rem;
+  font-size: 0.32rem;
   font-family: 'Arial', 'Microsoft YaHei';
 }
 
@@ -151,32 +151,35 @@ a {
 
 .container {
   padding: 0 0.3rem;
+  padding-top: 1.5rem;
 
-  h2 {
-    margin: 0.4rem 0;
-  }
+  .content {
+    h2 {
+      margin: 0.4rem 0;
+    }
 
-  h3 {
-    margin: 0.3rem 0;
-    line-height: 1.4;
-  }
+    h3 {
+      margin: 0.3rem 0;
+      line-height: 1.4;
+    }
 
-  li {
-    position: relative;
-    line-height: 1.4;
-    margin: 0.3rem 0;
-    padding-left: 0.4rem;
+    li {
+      position: relative;
+      line-height: 1.4;
+      margin: 0.3rem 0;
+      padding-left: 0.4rem;
 
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.2rem;
-      transform: translateY(-50%);
-      width: 0.16rem;
-      height: 0.16rem;
-      border-radius: 50%;
-      background: #333;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.2rem;
+        transform: translateY(-50%);
+        width: 0.16rem;
+        height: 0.16rem;
+        border-radius: 50%;
+        background: #333;
+      }
     }
   }
 }

@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import './utils/rem'
 //组件
+import HeaderBar from './components/HeaderBar.vue'
 import FooterBar from './components/FooterBar.vue'
 //引入插件
 import Toasted from 'vue-toasted'
@@ -16,6 +17,7 @@ import './assets/fonts/iconfont.css'
 Vue.config.productionTip = false
 Vue.use(Toasted)
 
+Vue.component('HeaderBar', HeaderBar)
 Vue.component('FooterBar', FooterBar)
 
 new Vue({

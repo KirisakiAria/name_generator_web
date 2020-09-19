@@ -1,6 +1,8 @@
 <template>
   <section class="container">
-    <section v-html="content"></section>
+    <header-bar />
+    <section class="content" v-html="content"></section>
+    <footer-bar />
   </section>
 </template>
 <script>

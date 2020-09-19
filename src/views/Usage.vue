@@ -1,6 +1,8 @@
 <template>
-  <section class="container">
-    <section v-html="content"></section>
+  <section class="container usage">
+    <header-bar />
+    <section class="content" v-html="content"></section>
+    <footer-bar />
   </section>
 </template>
 <script>
@@ -25,3 +27,8 @@
     },
   }
 </script>
+<style lang="less" scoped>
+  .usage {
+    padding-top: 1.8rem;
+  }
+</style>

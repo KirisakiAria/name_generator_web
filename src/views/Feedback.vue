@@ -59,10 +59,11 @@
 <style lang="less" scoped>
   @import url('../assets/css/style.less');
   .feedback {
+    padding-top: 0.4rem;
     textarea {
       margin-top: 0.2rem;
       width: 100%;
-      height: 200px;
+      height: 300px;
       border-radius: 0.16rem;
       border: 1px solid #efefef;
       padding: 0.2rem;
