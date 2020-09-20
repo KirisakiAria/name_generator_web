@@ -14,7 +14,10 @@
         </h1>
         <p>最懂你的网名生成器</p>
         <div class="android">
-          <img src="../assets/img/android.png" alt="彼岸自在" />
+          <img
+            src="../assets/img/android.png"
+            alt="彼岸自在 最懂你的网名生成器"
+          />
         </div>
       </section>
       <section class="second">
@@ -46,7 +49,6 @@
     mixins: [mixin],
     data() {
       return {
-        downloadLink: '',
         swiperOptions: {
           pagination: {
             el: '.swiper-pagination',
@@ -80,6 +82,11 @@
     components: {
       Swiper,
       SwiperSlide,
+    },
+    computed: {
+      url() {
+        return process.env.VUE_APP_BASE_API
+      },
     },
     methods: {
       setApp() {
@@ -1322,13 +1329,20 @@
       async getDownloadLink() {
         const res = await this.$get(this.API.download)
         if (res.data.code == '1000') {
-          this.downloadLink = res.data.data.link
+          this.downloadFile(res.data.data.link)
         }
+      },
+      downloadFile(link) {
+        const a = document.createElement('a')
+        a.href = this.url + link
+        console.log(a.href)
+        a.download = '彼岸自在.apk'
+        a.click()
+        window.URL.revokeObjectURL(a.href)
       },
     },
     mounted() {
       this.$nextTick(function () {
-        //this.getDownloadLink()
         this.setApp()
       })
     },
