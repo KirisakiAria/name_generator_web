@@ -25,6 +25,11 @@ const routes = [
     component: () => import('@/views/Usage'),
   },
   {
+    path: '/update',
+    name: 'Update',
+    component: () => import('@/views/Update'),
+  },
+  {
     path: '/feedback',
     name: 'Feedback',
     component: () => import('@/views/Feedback'),

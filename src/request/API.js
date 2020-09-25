@@ -7,4 +7,5 @@ export default {
   terms: `${api_prefix}/terms`,
   usage: `${api_prefix}/usage`,
   feedback: `${api_prefix}/feedback`,
+  update: `${api_prefix}/update`,
 }

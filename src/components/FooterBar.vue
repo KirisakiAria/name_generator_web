@@ -1,8 +1,6 @@
 <template>
   <footer class="footer" :class="{ white }">
-    <div class="item">
-      © 2020 All Rights Reserved. 彼岸自在 版权所有
-    </div>
+    <div class="item">© 2020 All Rights Reserved. 彼岸自在 版权所有</div>
     <div class="item">
       <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
         鲁ICP备2020036898号-1

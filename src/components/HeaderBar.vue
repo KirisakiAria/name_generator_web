@@ -72,6 +72,10 @@
             name: '使用方法',
             path: 'usage',
           },
+          {
+            name: '更新日志',
+            path: 'update',
+          },
         ],
       }
     },
@@ -99,7 +103,8 @@
     left: 0;
     padding: 0.3rem;
     background: rgba(0, 0, 0, 0.65);
-    z-index: 10;
+    z-index: 1000;
+
     .logo {
       img {
         width: 0.65rem;
