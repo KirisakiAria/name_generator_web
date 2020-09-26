@@ -1334,7 +1334,7 @@
       },
       downloadFile(link) {
         const a = document.createElement('a')
-        a.href = this.url + link
+        a.href = link
         console.log(a.href)
         a.download = '彼岸自在.apk'
         a.click()
