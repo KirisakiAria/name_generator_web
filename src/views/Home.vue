@@ -13,7 +13,7 @@
           </a>
         </h1>
         <p>最懂你的网名生成器</p>
-        <div class="android">
+        <div class="android" @click="getDownloadLink">
           <img
             src="../assets/img/android.png"
             alt="彼岸自在 最懂你的网名生成器"
@@ -1388,6 +1388,8 @@
       .android {
         margin-top: 0.25rem;
         z-index: 10;
+        cursor: pointer;
+
         img {
           width: 2.6rem;
         }
