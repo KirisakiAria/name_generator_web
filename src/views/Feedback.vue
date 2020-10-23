@@ -5,7 +5,12 @@
       <textarea v-model="form.content"></textarea>
       <div class="form-item">
         <label for="email">您的联系邮箱：</label>
-        <input type="email" id="email" v-model="form.email" />
+        <input
+          type="email"
+          id="email"
+          v-model="form.email"
+          @focus="scrollToBottom"
+        />
       </div>
       <button type="button" @click="submitForm">提交</button>
     </section>
@@ -28,6 +33,9 @@
       }
     },
     methods: {
+      scrollToBottom() {
+        window.scroll(0, 1000)
+      },
       async submitForm() {
         if (!this.form.content) {
           return this.$toasted
