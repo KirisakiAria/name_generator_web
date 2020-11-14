@@ -19,6 +19,7 @@
             alt="彼岸自在 最懂你的网名生成器"
           />
         </div>
+        <p class="subtitle">现已上架华为、小米、酷安APP应用市场</p>
       </section>
       <section class="second">
         <h5>
@@ -1385,8 +1386,13 @@
         letter-spacing: 14px;
       }
 
+      .subtitle {
+        margin-top: 0.2rem;
+        font-size: 0.2rem;
+      }
+
       .android {
-        margin-top: 0.25rem;
+        margin-top: 0.48rem;
         z-index: 10;
         cursor: pointer;
 
