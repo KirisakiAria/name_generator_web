@@ -1393,7 +1393,7 @@
       }
 
       .android {
-        margin-top: 0.3rem;
+        margin-top: 0.4rem;
         z-index: 10;
         cursor: pointer;
 
