@@ -12,22 +12,27 @@ const routes = [
   {
     path: '/privacypolicy',
     name: 'PrivacyPolicy',
-    component: () => import('@/views/PrivacyPolicy'),
+    component: () => import('@/views/Content'),
   },
   {
     path: '/terms',
     name: 'Terms',
-    component: () => import('@/views/Terms'),
+    component: () => import('@/views/Content'),
   },
   {
     path: '/usage',
     name: 'Usage',
-    component: () => import('@/views/Usage'),
+    component: () => import('@/views/Content'),
   },
   {
     path: '/update',
     name: 'Update',
-    component: () => import('@/views/Update'),
+    component: () => import('@/views/Content'),
+  },
+  {
+    path: '/vip',
+    name: 'Vip',
+    component: () => import('@/views/Content'),
   },
   {
     path: '/feedback',

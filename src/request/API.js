@@ -8,4 +8,5 @@ export default {
   usage: `${api_prefix}/usage`,
   feedback: `${api_prefix}/feedback`,
   update: `${api_prefix}/update`,
+  vip: `${api_prefix}/vip`,
 }

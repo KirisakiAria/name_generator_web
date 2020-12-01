@@ -13,6 +13,7 @@
           </a>
         </h1>
         <p>最懂你的网名生成器</p>
+        <p>现已上架各大APP应用市场</p>
         <div class="android" @click="getDownloadLink">
           <img
             src="../assets/img/android.png"
@@ -1385,8 +1386,14 @@
         letter-spacing: 14px;
       }
 
+      @media screen and (max-width: 750px) {
+        p {
+          letter-spacing: 2px;
+        }
+      }
+
       .android {
-        margin-top: 0.25rem;
+        margin-top: 0.3rem;
         z-index: 10;
         cursor: pointer;
 

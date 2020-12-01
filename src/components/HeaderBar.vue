@@ -27,7 +27,7 @@
             </button>
           </div>
           <ul>
-            <li v-for="(item, index) in link" :key="index">
+            <li @click="toggleMenu" v-for="(item, index) in link" :key="index">
               <router-link :to="item.path">
                 {{ item.name }}
               </router-link>
@@ -75,6 +75,10 @@
           {
             name: '更新日志',
             path: 'update',
+          },
+          {
+            name: 'VIP会员政策',
+            path: 'vip',
           },
         ],
       }
