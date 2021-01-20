@@ -35,6 +35,11 @@ const routes = [
     component: () => import('@/views/Content'),
   },
   {
+    path: '/key',
+    name: 'key',
+    component: () => import('@/views/Content'),
+  },
+  {
     path: '/feedback',
     name: 'Feedback',
     component: () => import('@/views/Feedback'),
