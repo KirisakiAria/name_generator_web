@@ -35,8 +35,8 @@ const routes = [
     component: () => import('@/views/Content'),
   },
   {
-    path: '/key',
-    name: 'key',
+    path: '/cdk',
+    name: 'Cdk',
     component: () => import('@/views/Content'),
   },
   {
