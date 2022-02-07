@@ -76,14 +76,6 @@
             name: '更新日志',
             path: 'update',
           },
-          {
-            name: 'VIP会员政策',
-            path: 'vip',
-          },
-          {
-            name: '激活码',
-            path: 'key',
-          },
         ],
       }
     },
