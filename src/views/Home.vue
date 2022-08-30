@@ -93,7 +93,6 @@
       setApp() {
         class App {
           constructor(container, options = {}) {
-            // Init ThreeJS Basics
             this.options = options
 
             if (this.options.distortion == null) {

@@ -9,5 +9,5 @@ export default {
   feedback: `${api_prefix}/feedback`,
   update: `${api_prefix}/update`,
   vip: `${api_prefix}/vip`,
-  cdk: `${api_prefix}/cdk`,
+  key: `${api_prefix}/key`,
 }

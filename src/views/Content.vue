@@ -28,8 +28,8 @@
           url = this.API.update
         } else if (path.includes('vip')) {
           url = this.API.vip
-        } else if (path.includes('cdk')) {
-          url = this.API.cdk
+        } else if (path.includes('key')) {
+          url = this.API.key
         }
         const res = await this.$get(url)
         if (res.data.code == '1000') {
